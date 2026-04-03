@@ -1,64 +1,36 @@
-# Full-Stack Task Management Assessment
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This project consists of a high-performance **Backend API** and a **Web Frontend Dashboard** built with modern tech stacks and industry best practices.
+## Getting Started
 
-## 🚀 Getting Started
+First, run the development server:
 
-### 📦 Prerequisites
-- Node.js (v18+)
-- Docker (optional, but recommended for Database)
-- PostgreSQL (if not using Docker)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🛠 Backend API (Node.js + TS + Prisma 7)
-Located in `/task-manager-api`
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Setup Instructions
-1.  **Navigate to directory**: `cd task-manager-api`
-2.  **Install dependencies**: `npm install`
-3.  **Setup Database**:
-    -   Ensure PostgreSQL is running locally.
-    -   Update `.env` with your `DATABASE_URL`.
-4.  **Configuration**: Prisma 7 now uses `prisma.config.ts` for database connection instead of inside `schema.prisma`.
-5.  **Sync Database**: `npx prisma db push`
-6.  **Generate Prisma Client**: `npx prisma generate`
-7.  **Start Development Server**: `npm run dev`
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### Key Features
-- **Security**: JWT authentication with Access (Short) and Refresh (Long) tokens.
-- **Token Rotation**: Implemented for refresh tokens to support multiple active sessions.
-- **Prisma 7 Ready**: Modular schema and config setup.
-- **Validation**: Strict input validation using **Zod**.
-- **Error Handling**: Centralized global error middleware with standard HTTP codes.
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 💻 Web Frontend (Next.js + TS + Redux Toolkit)
-Located in `/task-manager-web`
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Setup Instructions
-1.  **Navigate to directory**: `cd task-manager-web`
-2.  **Install dependencies**: `npm install`
-3.  **Configure API URL**: Update `NEXT_PUBLIC_API_URL` in `.env`.
-4.  **Start Dashboard**: `npm run dev`
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### Key Features
-- **State Management**: **Redux Toolkit (RTK)** for centralized app state.
-- **Data Fetching**: **RTK Query** with automatic cache invalidation and tag syncing.
-- **Auth Persistence**: Credentials stored securely in `authSlice` and synchronized with `LocalStorage`.
-- **API Interceptor**: Middleware-based token refresh logic using Redux thunks/queries.
-- **Responsive Design**: Premium mobile-first UI with **Lucide Icons** and **Framer Motion**.
-- **Notifications**: Real-time toast feedback for all CRUD operations.
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-## ✅ Assessment Checklist
-- [x] Node.js + TypeScript
-- [x] PostgreSQL with Prisma
-- [x] JWT Access/Refresh tokens
-- [x] Task CRUD with Pagination/Filter/Search
-- [x] Next.js App Router
-- [x] Responsive Design & Toasts
-- [x] Clean Error Handling & Project Structure
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
